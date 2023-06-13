@@ -1,0 +1,153 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/*
+clase para la pantalla
+*/
+.screen {
+    height: 100px;
+    width: 410px;
+    margin-bottom: 10px;
+    color: rgb(2, 1, 27);
+    font-weight: bold;
+    font-size: 50px;
+    text-align: right;
+}
+
+/*
+clase para la botonera
+*/
+.keys {
+    width: 500px;
+    padding-top: 80px;
+}
+
+
+
+/*
+clase contenedora
+*/
+.container {
+
+    align-content: center;
+    border-radius: 45px;
+    border-color: darkcyan;
+    border: 10px solid darkcyan;
+    background-color: rgb(226, 247, 240);
+    width: 500px;
+    padding-top: 100px;
+    padding-left: 80px;
+    padding-bottom: 60px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+
+}
+
+
+
+
+/*
+clase para el boton C
+*/
+.btnc {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 15px;
+    
+    background-color: rgb(197, 54, 11);
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 30px;
+
+
+}
+
+.btnc:hover {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 15px;
+    background-color: rgb(104, 14, 11);
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 30px;
+
+
+}
+
+/*
+clase para el botones numéricos
+*/
+
+.btn {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: darkcyan;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+.btn:hover {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: rgb(38, 219, 219);
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+/*
+clase para el botones operadores
+*/
+
+.operator {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: rgb(6, 82, 82);
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+.operator:hover {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: rgb(27, 194, 194);
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 30px;
+   
+
+}
+
+
+.mensaje {
+  
+   
+    padding: 10px;
+    margin-top: 10px;
+    color: #ad1414;
+    font-size: 20px;
+  }
+  
+  .mensaje p {
+    margin: 0;
+  }
+  
