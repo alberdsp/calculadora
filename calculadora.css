@@ -58,7 +58,7 @@ clase para el boton C
     height: 100px;
 
     border-radius: 15px;
-    
+
     background-color: rgb(197, 54, 11);
     color: aliceblue;
     font-weight: bold;
@@ -133,21 +133,24 @@ clase para el botones operadores
     color: aliceblue;
     font-weight: bold;
     font-size: 30px;
-   
+
 
 }
 
 
+/*
+clase para el mensaje de ayuda
+*/
+
 .mensaje {
-  
-   
+
+
     padding: 10px;
     margin-top: 10px;
     color: #ad1414;
     font-size: 20px;
-  }
-  
-  .mensaje p {
+}
+
+.mensaje p {
     margin: 0;
-  }
-  
+}

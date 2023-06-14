@@ -1,24 +1,40 @@
-// Declaramos la constante que será la pantalla
+// Declaramos la letante que será la pantalla
 const pantalla = document.querySelector('.screen');
 
-// Declaramos la constante que serán los botones 
+// Declaramos la letante que serán los botones 
 const botones = document.querySelectorAll('.btn');
-// Declaramos la constante que será el borrado C
+// Declaramos la letante que será el borrado C
 const botonesC = document.querySelectorAll('.btnc');
-// Declaramos la constante que serán los botones de operadores
+// Declaramos la letante que serán los botones de operadores
 const botonesO = document.querySelectorAll('.operator');
 
+pantalla.addEventListener('input', function () {
+    let input = pantalla.value;
 
-// Añadimos el listener para cuando pulsamos C
+    if (input.length > 12) {
+
+
+        // mostramos alerta
+        alert('limite sobrepasado')
+    }
+});
+
+
+
+
+
+// Añadimos el listener para cuando pulsamos C o DEL
 botonesC.forEach(botonC => {
     botonC.addEventListener('click', () => {
         // Asignamos el valor
-        const valorBotonC = botonC.value;
+        let valorBotonC = botonC.value;
 
 
-
+        // si pulsamos C ponemos a 0 
         if (valorBotonC === 'C') {
             pantalla.value = 0;
+
+
         }
 
 
@@ -26,13 +42,16 @@ botonesC.forEach(botonC => {
         else {
 
             if (pantalla.value != 0) {
-                const numeroString = pantalla.value.toString();
-                console.log(numeroString)
-                const nuevoNumeroString = numeroString.slice(0, -1);
+                let numeroString = pantalla.value.toString();
+
+                let nuevoNumeroString = numeroString.slice(0, -1);
 
                 if (nuevoNumeroString.length === 0) {
 
                     pantalla.value = 0;
+                    // mostramos alerta
+                    alert('Pantalla ya borrada ')
+
 
                 } else {
 
@@ -57,7 +76,7 @@ botonesC.forEach(botonC => {
 botonesO.forEach(botonO => {
     botonO.addEventListener('click', () => {
         // Asignamos el operador
-        const valorBotonO = botonO.value;
+        let valorBotonO = botonO.value;
 
 
         if (valorBotonO === '+') {
@@ -86,15 +105,15 @@ botonesO.forEach(botonO => {
         // pasamos parametro del mensaje de ayuda
         else if (valorBotonO === '%') {
 
-            
-               if (pantalla.value === '0')
-            mensajeAyuda('Pulsa el número sobre el que quieres calcular, después la tecla * y el segundo número, finalmente el %');
-           
-           
+
+            if (pantalla.value === '0')
+                mensajeAyuda('Pulsa el número sobre el que quieres calcular, después la tecla * y el segundo número, finalmente el %');
+
+
             else {
-                mostrarMensaje();
-                pantalla.value = eval(pantalla.value)/100;
-              
+                
+                pantalla.value = eval(pantalla.value) / 100;
+
 
             }
         }
@@ -108,7 +127,7 @@ botonesO.forEach(botonO => {
 botones.forEach(boton => {
     boton.addEventListener('click', () => {
         // Asignamos el valor
-        const valorBoton = boton.value;
+        let valorBoton = boton.value;
 
         // Si la pantalla está en 0 lo eliminamos para que tome valor
         if (pantalla.value === '0') {
@@ -119,7 +138,7 @@ botones.forEach(boton => {
         // Acción para cuando pulsamos '=' 
         if (valorBoton === '=') {
             try {
-                const resultado = eval(pantalla.value); // resultado
+                let resultado = eval(pantalla.value); // resultado
                 pantalla.value = resultado;
             } catch (error) {
                 pantalla.value = 'Error';
@@ -139,22 +158,26 @@ botones.forEach(boton => {
     });
 });
 
+// mensaje de ayuda
 
-function mensajeAyuda( mimensaje) {
-    const mensajeDiv = document.getElementById('mensaje');
-  
+function mensajeAyuda(mimensaje) {
+    let mensajeDiv = document.getElementById('mensaje');
+
     // Crear el mensaje
-    const mensajeTexto = mimensaje;
-    const mensajeParrafo = document.createElement('p');
+    let mensajeTexto = mimensaje;
+    let mensajeParrafo = document.createElement('p');
     mensajeParrafo.textContent = mensajeTexto;
-  
+
     // Añadimos el  el mensaje al DOM
     mensajeDiv.appendChild(mensajeParrafo);
-    setTimeout(function() {
+    setTimeout(function () {
         mensajeDiv.removeChild(mensajeParrafo);
-      }, 5000);
-  }
-  
+    }, 5000);
 
 
- 
+}
+
+
+
+
+
